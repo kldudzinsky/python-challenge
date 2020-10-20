@@ -16,14 +16,21 @@ with open(Bank_csv) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
     csv_header = next(csvreader)
     lines = len(list(csvreader))
-print ("number of months:", (lines))
-# sum of Profit/losses
-with open(Bank_csv) as csvfile: 
-    csvreader = csv.reader(csvfile, delimiter = ',')
-    csv_header = next(csvreader)
-    total = sum(float(row[1]) for row in csvreader)
-print("sum of profits/lossts:", (total))
+ # sum of Profit/losses
+    total_months = sum(float(row[1]) for row in csvreader)
 #avg of change between each line 
-with open(Bank_csv) as csvfile:
-    csv_header = next(csvreader)
-    df.diff()
+    #create empty lists
+    date = []
+    profit/loss= []
+    monthly_profit_change =[]
+    for row in csvreader
+        date.append(row[0])
+        profit/loss.append(int(row[1]))
+    #loop to get monthly changes in profits
+    for i in range(len(profit/los)-1):
+        monthly_profit_change.append(profit/loss[i+1]-profit/loss[i])
+
+    
+
+print ("number of months:", (lines))
+print("sum of profits/lossts:", (total_months))
