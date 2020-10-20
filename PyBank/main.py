@@ -23,4 +23,7 @@ with open(Bank_csv) as csvfile:
     csv_header = next(csvreader)
     total = sum(float(row[1]) for row in csvreader)
 print("sum of profits/lossts:", (total))
-
+#avg of change between each line 
+with open(Bank_csv) as csvfile:
+    csv_header = next(csvreader)
+    df.diff()
