@@ -47,19 +47,22 @@ print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${max_
 # # Output files
 # output_file = Path("Homework 3 Python", "Financial_Analysis_Summary.txt")
 
-# with open(output_file,"w") as file:
+# # with open(output_file,"w") as file:
     
-# # # Write methods to print to Financial_Analysis_Summary 
+#  # Write methods to print to Financial_Analysis_Summary 
 #     print("Financial Analysis")
-#     print("\n")
+#     print("")
 #     print("----------------------------")
-#     print("\n")
+#     print("")
+#     print("Financial Analysis")
+#     print("----------------------------")
+#     print("")
 #     print(f"Total Months: {len(total_months)}")
-#     print("\n")
+#     print("")
 #     print(f"Total: ${sum(total_profit)}")
-#     print("\n")
+#     print("")
 #     print(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change),2)}")
-#     print("\n")
-#     print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${(str(max_increase_value))})")
-#     print("\n")
-#     print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
+#     print("")
+#     print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${max_increase_value})")
+#     print("")
+#     print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${max_decrease_value})")

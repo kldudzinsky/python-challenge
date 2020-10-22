@@ -51,3 +51,21 @@ print(f"Total: $ {net_profit}")
 print(f"Average Change: $ {avg_change}")
 print(f"Greatest Increase in Profits: {total_months[gr_increase_month]} $ {gr_increase_value}")
 print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_decrease_value}")
+
+
+#output to file
+f = open("Results.txt",)
+f.writelines(
+    print("Financial Analysis")
+    print("---------------------")
+    print("")
+    print(f"Total Months: {number_months}")
+    print("")
+    print(f"Total: $ {net_profit}")
+    print("")
+    print(f"Average Change: $ {avg_change}")
+    print("")
+    print(f"Greatest Increase in Profits: {total_months[gr_increase_month]} $ {gr_increase_value}")
+    print("")
+    print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_decrease_value}") )
+f.close()
