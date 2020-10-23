@@ -65,7 +65,7 @@ for x in range(len(candidate_unique)):
 print("------------------------")
 print(election_winner)
 print("------------------------")
-
+#output to results.txt under pypoll analysis
 output_path = os.path.join("PyPoll", "Analysis", "Results.txt")
 with open(output_path, 'w', newline = '') as datafile:
     datafile.write ('Election Results\n')

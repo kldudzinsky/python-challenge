@@ -42,7 +42,7 @@ gr_increase_value = max(monthly_profit_change)
 gr_decrease_value = min(monthly_profit_change)
 
 # connect gr increase and gr decrease value with correct month. 
- #use +1 at end bc month with change is actually the next month
+ #use +1 at end b/c month with change is actually the next month
 gr_increase_month = monthly_profit_change.index(max(monthly_profit_change)) + 1
 gr_decrease_month = monthly_profit_change.index(min(monthly_profit_change)) + 1 
 
@@ -53,7 +53,7 @@ print(f"Greatest Increase in Profits: {total_months[gr_increase_month]} $ {gr_in
 print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_decrease_value}")
 
 
-#output to file
+#output to results.txt under pybank analysis 
 output_path = os.path.join("PyBank", "Analysis", "Results.txt")
 with open(output_path, 'w', newline = '') as datafile:
     datafile.write('Financial Analysis\n')
