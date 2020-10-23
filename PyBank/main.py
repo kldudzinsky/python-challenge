@@ -54,18 +54,11 @@ print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_de
 
 
 #output to file
-f = open("Results.txt",)
-f.writelines(
-    print("Financial Analysis")
-    print("---------------------")
-    print("")
-    print(f"Total Months: {number_months}")
-    print("")
-    print(f"Total: $ {net_profit}")
-    print("")
-    print(f"Average Change: $ {avg_change}")
-    print("")
-    print(f"Greatest Increase in Profits: {total_months[gr_increase_month]} $ {gr_increase_value}")
-    print("")
-    print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_decrease_value}") )
-f.close()
+output_path = os.path.join("PyBank", "Analysis", "Results.txt")
+with open(output_path, 'w', newline = '') as datafile:
+    datafile.write('Financial Analysis\n')
+    datafile.write('--------------------- \n')
+    datafile.write(f'Total Months: {number_months} \n')
+    datafile.write(f'Total: $ {net_profit}\n')
+    datafile.write(f'Average Change: $ {avg_change}\n')
+    datafile.write(f'Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ {gr_decrease_value} \n' )
