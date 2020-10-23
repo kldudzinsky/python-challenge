@@ -58,7 +58,7 @@ with open(PyPoll_csv) as csvfile:
     election_winner = candidate_unique[votes_index] 
 print ("Election Results")
 print("------------------------")
-print(f'Total votes {total_votes}')
+print(f'Total Votes: {total_votes}')
 print("------------------------")
 for x in range(len(candidate_unique)):
     print(f'{candidate_unique[x]} : {perc_vote_list[x]}% ({candidate_num_votes[x]})')
@@ -66,4 +66,14 @@ print("------------------------")
 print(election_winner)
 print("------------------------")
 
-
+output_path = os.path.join("PyPoll", "Analysis", "Results.txt")
+with open(output_path, 'w', newline = '') as datafile:
+    datafile.write ('Election Results\n')
+    datafile.write ('------------------------\n')
+    datafile.write (f'Total Votes: {total_votes}\n')
+    datafile.write ('------------------------\n')
+    for x in range(len(candidate_unique)):
+        datafile.write(f'{candidate_unique[x]} : {perc_vote_list[x]}% ({candidate_num_votes[x]})\n')
+    datafile.write ('------------------------\n')
+    datafile.write(f'Winner: {election_winner} \n')
+    datafile.write('------------------------')
