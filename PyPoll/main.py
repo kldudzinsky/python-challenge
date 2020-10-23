@@ -56,5 +56,14 @@ with open(PyPoll_csv) as csvfile:
             votes_recieved= candidate_num_votes
             votes_index = x
     election_winner = candidate_unique[votes_index] 
-print (election_winner)
-print 
+print ("Election Results")
+print("------------------------")
+print(f'Total votes {total_votes}')
+print("------------------------")
+for x in range(len(candidate_unique)):
+    print(f'{candidate_unique[x]} : {perc_vote_list[x]}% ({candidate_num_votes[x]})')
+print("------------------------")
+print(election_winner)
+print("------------------------")
+
+
