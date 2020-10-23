@@ -11,18 +11,19 @@ import csv
 
 Bank_csv = os.path.join("PyBank", "Resources", "Bank_Resources_budget_data.csv")
 
-# Create empty lists to iterate through specific rows for the following variables
+# Create empty lists
 total_months = []
 total_profit = []
 monthly_profit_change = []
  
 with open(Bank_csv) as csvfile: 
     csvreader = csv.reader(csvfile, delimiter = ',')
+    #skip header 
     csv_header = next(csvreader)
 
     for row in csvreader: 
 
-        # Append the total months and total profit to their corresponding lists
+        # Append total_months and total_profit to correct lists in csv file
         total_months.append(row[0])
         total_profit.append(int(row[1]))
         #total number of Months
@@ -46,6 +47,7 @@ gr_decrease_value = min(monthly_profit_change)
 gr_increase_month = monthly_profit_change.index(max(monthly_profit_change)) + 1
 gr_decrease_month = monthly_profit_change.index(min(monthly_profit_change)) + 1 
 
+#Print results! 
 print(f"Total Months: {number_months}")
 print(f"Total: $ {net_profit}")
 print(f"Average Change: $ {avg_change}")
@@ -54,6 +56,7 @@ print(f"Greatest Decrease in Profits: {total_months[gr_decrease_month]} $ ({gr_d
 
 
 #output to results.txt under pybank analysis 
+#remember to add \n to continue writing on next line
 output_path = os.path.join("PyBank", "Analysis", "Results.txt")
 with open(output_path, 'w', newline = '') as datafile:
     datafile.write('Financial Analysis\n')

@@ -25,6 +25,7 @@ total_votes = 0
 
 with open(PyPoll_csv) as csvfile: 
     csvreader = csv.reader(csvfile, delimiter = ',')
+    #skip header
     csv_header = next(csvreader)
     for row in csvreader:
     #add to total votes
